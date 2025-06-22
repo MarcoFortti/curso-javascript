@@ -1,0 +1,3 @@
+Este programa fue creado con JavaScript para simular una biblioteca virtual.
+Su función principal es agregar libros en memoria, listar los libros existentes, y permitir prestar o devolver un libro.
+Todo esto se realiza mediante interacción con el usuario a través de ventanas del navegador prompt y alert sin necesidad de una interfaz gráfica.
