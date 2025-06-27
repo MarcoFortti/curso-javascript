@@ -1,0 +1,186 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente base para el cuerpo general */
+    margin: 0;
+    padding: 15px;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.4;
+}
+
+header {
+    background-color: #555;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+h1 {
+    font-family: Georgia, serif; /* Fuente con serifa, clásica para el título principal */
+    font-size: 2em;
+    margin: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+form label, .action-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 18px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#libros-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.libro-card {
+    border: 1px solid #eee;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: #fdfdfd;
+}
+
+.libro-card h3 {
+    font-family: 'Trebuchet MS', sans-serif; /* Otra sans-serif para títulos de libros */
+    font-size: 1.1em;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.libro-card p {
+    font-family: Arial, sans-serif; /* Un Arial clásico para los detalles del libro */
+    font-size: 0.85em;
+    margin-bottom: 3px;
+    color: #666;
+}
+
+.libro-id {
+    font-weight: bold;
+    color: #a0522d;
+}
+
+.disponible {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.prestado {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+#mensajes {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    grid-column: 1 / -1;
+}
+
+.mensaje {
+    font-family: Verdana, sans-serif; /* Fuente clara y legible para mensajes */
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.mensaje.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.mensaje.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.action-group {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.action-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.action-group h3 {
+    font-family: Arial, sans-serif; /* Arial para los títulos de grupo de acción */
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 12px;
+}
+
+.mensaje.warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+footer {
+    font-family: 'Times New Roman', serif; /* Times New Roman para el pie de página */
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    color: #777;
+    font-size: 0.85em;
+    background-color: #ededed;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+    .card {
+        margin-bottom: 15px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+}

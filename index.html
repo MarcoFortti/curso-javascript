@@ -1,13 +1,70 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simulador de Biblioteca - Coderhouse</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <script src="./Libro.js"></script>
-    <script src="./main.js"></script>
+
+    <header>
+        <h1>📚 Mi Biblioteca Interactiva 📚</h1>
+    </header>
+
+    <main>
+        <section id="agregar-libro-section" class="card">
+            <h2>Agregar Nuevo Libro</h2>
+            <form id="form-agregar-libro">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" required>
+
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" required>
+
+                <label for="anio">Año de Publicación:</label>
+                <input type="number" id="anio" min="1000" max="2025" required>
+
+                <button type="submit">Agregar Libro</button>
+            </form>
+        </section>
+
+        <section id="listar-libros-section" class="card">
+            <h2>Libros Disponibles</h2>
+            <div id="libros-container">
+                <p id="no-libros-msg">No hay libros registrados aún.</p>
+            </div>
+        </section>
+
+        <section id="acciones-libro-section" class="card">
+            <h2>Acciones con Libros</h2>
+            <div class="action-group">
+                <h3>Prestar Libro</h3>
+                <label for="id-prestar">ID del Libro:</label>
+                <input type="number" id="id-prestar" placeholder="Ej: 123456">
+                <label for="nombre-usuario">Nombre de Usuario:</label>
+                <input type="text" id="nombre-usuario" placeholder="Ej: Juan Pérez">
+                <button id="btn-prestar">Prestar</button>
+            </div>
+
+            <div class="action-group">
+                <h3>Devolver Libro</h3>
+                <label for="id-devolver">ID del Libro:</label>
+                <input type="number" id="id-devolver" placeholder="Ej: 123456">
+                <button id="btn-devolver">Devolver</button>
+            </div>
+        </section>
+
+        <div id="mensajes" class="card">
+            </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Simulador de Biblioteca - Coderhouse</p>
+    </footer>
+
+    <script src="js/Libro.js"></script> 
+    <script src="js/main.js"></script> 
 </body>
 </html>
