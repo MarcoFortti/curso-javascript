@@ -1,48 +1,57 @@
+
+
+/* Ajustes generales del cuerpo */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente base para el cuerpo general */
-    margin: 0;
-    padding: 15px;
-    background-color: #f0f0f0;
-    color: #333;
-    line-height: 1.4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente clara y moderna */
+    margin: 0; 
+    padding: 15px; 
+    background-color: #f0f0f0; 
+    color: #333; 
+    line-height: 1.4; 
 }
 
+/* Encabezado de la pagina */
 header {
-    background-color: #555;
+    background-color: #555; /* Gris oscuro */
     color: white;
     padding: 10px 0;
     text-align: center;
     margin-bottom: 20px;
-    border-radius: 4px;
+    border-radius: 4px; /* Esquinas suavizadas */
 }
 
+/* Titulo principal */
 h1 {
-    font-family: Georgia, serif; /* Fuente con serifa, clásica para el título principal */
+    font-family: Georgia, serif; /* Un toque más clásico */
     font-size: 2em;
     margin: 0;
 }
 
+/* Seccion principal con grilla flexible */
 main {
     max-width: 900px;
     margin: 15px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Se adapta al ancho disponible */
+    gap: 15px; /* Espacio entre elementos */
 }
 
+/* Tarjetas que contienen contenido */
 .card {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Sombra leve para levantar visualmente */
 }
 
+/* Etiquetas del formulario */
 form label, .action-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
+/* Campos de texto y numero */
 input[type="text"],
 input[type="number"] {
     width: calc(100% - 18px);
@@ -53,8 +62,9 @@ input[type="number"] {
     box-sizing: border-box;
 }
 
+/* Botones generales */
 button {
-    background-color: #007bff;
+    background-color: #007bff; /* Azul llamativo */
     color: white;
     padding: 10px 15px;
     border: none;
@@ -62,12 +72,14 @@ button {
     cursor: pointer;
     width: 100%;
     box-sizing: border-box;
+    transition: background-color 0.3s ease; 
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Azul más oscuro en hover */
 }
 
+/* Contenedor que muestra los libros agregados */
 #libros-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -75,51 +87,67 @@ button:hover {
     margin-top: 15px;
 }
 
+/* Tarjeta individual de libro */
 .libro-card {
     border: 1px solid #eee;
     padding: 12px;
     border-radius: 4px;
     background-color: #fdfdfd;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .libro-card h3 {
-    font-family: 'Trebuchet MS', sans-serif; /* Otra sans-serif para títulos de libros */
+    font-family: 'Trebuchet MS', sans-serif;
     font-size: 1.1em;
     color: #007bff;
     margin-bottom: 5px;
 }
 
 .libro-card p {
-    font-family: Arial, sans-serif; /* Un Arial clásico para los detalles del libro */
+    font-family: Arial, sans-serif;
     font-size: 0.85em;
     margin-bottom: 3px;
     color: #666;
 }
 
+/* ID del libro destacado */
 .libro-id {
     font-weight: bold;
-    color: #a0522d;
+    color: #a0522d; /* Marrón suave */
 }
 
+/* Estado del libro: disponible */
 .disponible {
-    color: #28a745;
+    color: #28a745; /* Verde "ok" */
     font-weight: bold;
 }
 
+/* Estado del libro  prestado */
 .prestado {
-    color: #dc3545;
+    color: #dc3545; /* Rojo de advertencia */
     font-weight: bold;
 }
+
+/* Mensaje que aparece si no hay libros cargados */
+#no-libros-msg {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    grid-column: 1 / -1; 
+}
+
 
 #mensajes {
     text-align: center;
     margin-top: 15px;
     padding: 10px;
     grid-column: 1 / -1;
+    display: none;
 }
 
+/* Estilos de mensajes si se mostraran manualmente */
 .mensaje {
-    font-family: Verdana, sans-serif; /* Fuente clara y legible para mensajes */
+    font-family: Verdana, sans-serif;
     padding: 8px;
     border-radius: 4px;
     font-weight: bold;
@@ -135,31 +163,34 @@ button:hover {
     color: #721c24;
 }
 
+.mensaje.warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* Agrupacion de acciones dentro del formulario */
 .action-group {
     margin-bottom: 20px;
     padding-bottom: 15px;
     border-bottom: 1px dashed #e0e0e0;
 }
 
+/* Si es la ultima accion, quitamos el borde */
 .action-group:last-child {
     border-bottom: none;
     margin-bottom: 0;
 }
 
 .action-group h3 {
-    font-family: Arial, sans-serif; /* Arial para los títulos de grupo de acción */
+    font-family: Arial, sans-serif;
     color: #555;
     font-size: 1.1em;
     margin-bottom: 12px;
 }
 
-.mensaje.warning {
-    background-color: #fff3cd;
-    color: #856404;
-}
 
 footer {
-    font-family: 'Times New Roman', serif; /* Times New Roman para el pie de página */
+    font-family: 'Times New Roman', serif;
     text-align: center;
     margin-top: 30px;
     padding: 15px;
@@ -169,9 +200,10 @@ footer {
     border-radius: 5px;
 }
 
+/* Ajustes para pantallas chicas */
 @media (max-width: 768px) {
     main {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
         padding: 0 10px;
     }
     .card {
@@ -182,5 +214,8 @@ footer {
     }
     h2 {
         font-size: 1.8em;
+    }
+    button {
+        width: 100%; /* Botones ocupan todo el ancho */
     }
 }

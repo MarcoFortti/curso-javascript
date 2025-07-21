@@ -1,0 +1,42 @@
+[
+  {
+    "id": 100001,
+    "titulo": "Harry Potter y la Orden del Fénix",
+    "autor": "J.K. Rowling",
+    "anio": 2003,
+    "prestado": false,
+    "prestamoA": null
+  },
+  {
+    "id": 100002,
+    "titulo": "Harry Potter y el cáliz de fuego",
+    "autor": "J.K. Rowling",
+    "anio": 2000,
+    "prestado": true,
+    "prestamoA": "Maria Lopez"
+  },
+  {
+    "id": 100003,
+    "titulo": "Harry Potter y el prisionero de Azkaban",
+    "autor": "J.K. Rowling",
+    "anio": 1999,
+    "prestado": false,
+    "prestamoA": null
+  },
+  {
+    "id": 100004,
+    "titulo": "Harry Potter y la piedra filosofal",
+    "autor": "J.K. Rowling",
+    "anio": 1997,
+    "prestado": false,
+    "prestamoA": null
+  },
+  {
+    "id": 100005,
+    "titulo": "Harry Potter y la cámara secreta",
+    "autor": "J.K. Rowling",
+    "anio": 1998,
+    "prestado": true,
+    "prestamoA": "Carlos Gomez"
+  }
+]
